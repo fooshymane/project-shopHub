@@ -1,16 +1,67 @@
-# React + Vite
+# ShopHub — E-commerce mock (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ShopHub is a lightweight e-commerce demo app built with React and Vite. It includes product browsing, product details, a cart/checkout flow, and a simple auth UX (client-side) to demonstrate common patterns (routing, context state, forms).
 
-Currently, two official plugins are available:
+## Features
+- **Product listing**: Grid view of products.
+- **Product details**: Dedicated page per product.
+- **Cart + checkout**: Add items, adjust quantity, remove items, view totals, and place an order.
+- **Auth screen**: Login/Signup UI built with React Hook Form (client-side only).
+- **Modern UI**: Custom CSS with design tokens (dark-modern theme).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech stack
+- **React 19** + **Vite**
+- **React Router** for routing
+- **Context API** for app state (`AuthContext`, `CartContext`)
+- **React Hook Form** for form handling/validation
+- **ESLint** for linting
 
-## React Compiler
+## Getting started
+### Prerequisites
+- Node.js (LTS recommended)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Install & run
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+### Build & preview production build
+```bash
+npm run build
+npm run preview
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Lint
+```bash
+npm run lint
+```
+
+## Project structure 
+```text
+src/
+  assets/               # Static assets
+  components/           # Reusable UI components (Navbar, ProductCard)
+  context/              # Global state (AuthContext, CartContext)
+  data/                 # Product data source (in-memory)
+  pages/                # Route pages (Home, Auth, Checkout, ProductDetails)
+  App.jsx               # App shell + routes
+  App.css               # Component/page styles
+  index.css             # Global tokens + base styles (theme)
+  main.jsx              # React entrypoint + router setup
+```
+
+## State + data notes
+- **Products** are currently sourced from `src/data/` (in-memory). There’s no backend/API.
+- **Auth** is implemented as a client-side flow via `src/context/AuthContext.jsx` (intended for demo purposes).
+- **Cart state** lives in `src/context/CartContext.jsx`, which computes totals and item quantities.
+
+## Styling/theme
+- Global design tokens (colors, surfaces, spacing, radii, shadows, focus rings) live in `src/index.css`.
+- Component/page styles consume those tokens from `src/App.css`.
+
+## Next improvements (ideas)
+- Persist cart/auth to `localStorage` (or integrate a real backend).
+- Add search, filtering, and sorting on the product grid.
+- Add route guards for checkout (require auth).
+- Add tests (Vitest + React Testing Library).

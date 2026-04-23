@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { useCart } from "../context/CartContext";
 
 export default function Checkout() {
+  const [orderPlaced, setOrderPlaced] = useState(false);
   const {
     getCartItemsWithProducts,
     updateQuantity,
@@ -13,9 +15,41 @@ export default function Checkout() {
   const total = getCartTotal();
 
   function placeOrder() {
-    alert("Successful Order!");
     clearCart();
+    setOrderPlaced(true);
   }
+
+  if (orderPlaced) {
+    return (
+      <div className="page">
+        <div className="container">
+          <div className="order-success">
+            <h1 className="order-success-title">Order placed</h1>
+            <p className="order-success-message">
+              Thanks for shopping with ShopHub. Your items will be ready soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (cartItems.length === 0) {
+    return (
+      <div className="page">
+        <div className="container">
+          <h1 className="page-title">Checkout</h1>
+          <div className="order-success">
+            <h2 className="checkout-section-title">Your cart is empty</h2>
+            <p className="order-success-message">
+              Add a few items to get started.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="page">
       <div className="container">

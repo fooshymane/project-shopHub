@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 export default function Navbar() {
@@ -10,12 +10,23 @@ export default function Navbar() {
           ShopHub
         </Link>
         <div className="navbar-links">
-          <Link to="/" className="navbar-link">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? "navbar-link-active" : ""}`
+            }
+            end
+          >
             Home
-          </Link>
-          <Link to="/checkout" className="navbar-link">
+          </NavLink>
+          <NavLink
+            to="/checkout"
+            className={({ isActive }) =>
+              `navbar-link ${isActive ? "navbar-link-active" : ""}`
+            }
+          >
             Cart
-          </Link>
+          </NavLink>
         </div>
         <div className="navbar-auth">
           {!user ? (

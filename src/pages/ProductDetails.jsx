@@ -21,7 +21,33 @@ export default function ProductDetails() {
   }, [id]);
 
   if (!product) {
-    return <h1>Loading...</h1>;
+    return (
+      <div className="page">
+        <div className="container">
+          <div className="product-detail" aria-busy="true">
+            <div className="product-detail-image">
+              <div
+                style={{
+                  aspectRatio: "4 / 3",
+                  borderRadius: "var(--radius-md)",
+                  background: "var(--surface-2)",
+                  border: "1px solid var(--border)",
+                }}
+              />
+            </div>
+            <div className="product-detail-content">
+              <h1 className="product-detail-name">Loading product</h1>
+              <p className="product-detail-description">
+                Fetching details…
+              </p>
+              <button className="btn btn-secondary" disabled>
+                Please wait
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   const productInCart = cartItems.find((item) => item.id === product.id);

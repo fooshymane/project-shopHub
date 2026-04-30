@@ -3,6 +3,10 @@ const products = [
     id: 1,
     name: "Wireless Headphones",
     price: 99.99,
+    category: "Audio",
+    rating: 4.6,
+    stock: 18,
+    createdAt: "2026-02-12T10:00:00.000Z",
     image:
       "https://images.unsplash.com/photo-1628329567705-f8f7150c3cff?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
@@ -12,6 +16,10 @@ const products = [
     id: 2,
     name: "Smart Watch",
     price: 249.99,
+    category: "Wearables",
+    rating: 4.4,
+    stock: 9,
+    createdAt: "2026-03-05T10:00:00.000Z",
     image:
       "https://images.unsplash.com/photo-1617043786394-f977fa12eddf?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
@@ -21,6 +29,10 @@ const products = [
     id: 3,
     name: "Laptop Stand",
     price: 49.99,
+    category: "Office",
+    rating: 4.2,
+    stock: 25,
+    createdAt: "2026-01-22T10:00:00.000Z",
     image:
       "https://images.unsplash.com/photo-1579609598065-79f8e5bcfb70?q=80&w=732&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
@@ -30,6 +42,10 @@ const products = [
     id: 4,
     name: "Mechanical Keyboard",
     price: 129.99,
+    category: "Accessories",
+    rating: 4.7,
+    stock: 6,
+    createdAt: "2026-02-27T10:00:00.000Z",
     image:
       "https://images.unsplash.com/photo-1640268296919-d105766cb6b1?q=80&w=1828&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
@@ -39,6 +55,10 @@ const products = [
     id: 5,
     name: "USB-C Hub",
     price: 39.99,
+    category: "Accessories",
+    rating: 4.1,
+    stock: 0,
+    createdAt: "2026-01-10T10:00:00.000Z",
     image:
       "https://plus.unsplash.com/premium_photo-1764113096548-11270b5febed?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
@@ -48,6 +68,10 @@ const products = [
     id: 6,
     name: "Wireless Mouse",
     price: 29.99,
+    category: "Accessories",
+    rating: 4.3,
+    stock: 32,
+    createdAt: "2026-03-18T10:00:00.000Z",
     image:
       "https://images.unsplash.com/photo-1527814050087-3793815479db?w=500&h=500&fit=crop",
     description:
@@ -57,6 +81,10 @@ const products = [
     id: 7,
     name: "Monitor Stand",
     price: 79.99,
+    category: "Office",
+    rating: 4.0,
+    stock: 12,
+    createdAt: "2025-12-14T10:00:00.000Z",
     image:
       "https://plus.unsplash.com/premium_photo-1706545209829-1b082de60f15?q=80&w=846&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:
@@ -66,6 +94,10 @@ const products = [
     id: 8,
     name: "Webcam HD",
     price: 89.99,
+    category: "Video",
+    rating: 3.9,
+    stock: 14,
+    createdAt: "2026-04-02T10:00:00.000Z",
     image:
       "https://images.unsplash.com/photo-1623949556303-b0d17d198863?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description:

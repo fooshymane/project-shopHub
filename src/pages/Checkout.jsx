@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../context/useCart";
 
 export default function Checkout() {
   const [orderPlaced, setOrderPlaced] = useState(false);

@@ -1,7 +1,6 @@
-import { createContext, useState, useContext } from "react";
+import { useState } from "react";
 import { getProductById } from "../data/products";
-
-const CartContext = createContext(null);
+import CartContext from "./cart-context";
 
 export default function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState([]); // {id: 2, quantity: 7}
@@ -73,10 +72,4 @@ export default function CartProvider({ children }) {
       {children}
     </CartContext.Provider>
   );
-}
-
-export function useCart() {
-  const context = useContext(CartContext);
-
-  return context;
 }
